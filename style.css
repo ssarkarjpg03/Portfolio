@@ -1,0 +1,818 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --first-color:#34353b;
+    --second-color:#3d3e42; 
+    --second-color-nav:#3d3e42c9;
+    --third-color:#fec86a;
+    --forth-color:#3d3e42;
+    --fith-color:#EED3D9;
+    --text-color:white;
+    --nav-text-color:#98999a;
+    --project-h3-color:white;
+    --manu-shadow-color:rgba(143, 143, 143, 0.493);
+    
+
+
+    /* --first-color:#fff;
+    --second-color:#B5C0D0; 
+    --second-color-nav:#a3a8a28a;
+    --third-color:#e4904c;
+    --forth-color:#737e70;
+    --fith-color:#EED3D9;
+    --text-color:black; 
+    --nav-text-color:black;
+    --project-h3-color:white; 
+    --manu-shadow-color:rgba(0, 0, 0, 0.568);*/
+} 
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body {
+    background-color: var(--first-color);
+}
+header {
+    height: 100vh;
+    padding: 36px 100px;
+    background-image: url(img/me.png);
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100vw;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position:fixed;
+    width: 90%;
+    height: 70px;
+    z-index: 99;
+    background-color:var(--second-color-nav);
+    border-radius: 60px;
+}
+
+header nav #logo {
+    margin-left: 5px;
+    height: 56px;
+    width: 56px;
+    object-fit: contain;
+    filter:invert(70%) sepia(96%) saturate(558%) hue-rotate(359deg)
+    brightness(103%) contrast(106%);
+}
+    
+
+header nav ul {
+    display: flex;
+}
+  
+header nav ul li {
+    list-style: none;
+    margin: 0px 20px;
+}
+  
+header nav ul li a {
+    color: var(--nav-text-color);
+    text-decoration: none;
+    transition: all ease 0.5s;
+}
+  
+header nav ul li a:hover {
+    color: #fbfbfb;
+}
+  
+header nav ul li .active {
+    color: #ffffff;
+}
+
+.landing {
+    display: flex;
+    height: 90vh;
+    background-color: transparent;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.landing .intro {
+    display: flex;
+    flex-direction: column;
+}
+  
+.landing .intro h3 {
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 32px;
+    margin-left: 10vw;
+}
+  
+.landing .intro h3 span {
+    color: var(--third-color);
+    font-weight: 600;
+    font-size: 3.5rem;
+}
+  
+.intro div {
+    height: 48px;
+    width: 144px;
+    margin-top: 2.5vh;
+    margin-left: 10vw;
+    background-color: transparent;
+    border: 2px solid var(--third-color);
+    border-radius: 8px;
+    color: var(--third-color);
+    font-size: 16px;
+    transition: all ease 0.5s;
+    
+}
+  
+.intro div:hover {
+    background-color: var(--third-color);
+    color: #34353b;
+}
+.intro div a{
+    color: var(--text-color);
+    padding:0.8em;
+    text-align: center;
+    display:inline-block;
+    text-decoration: none !important;
+    margin-left: 20px;
+}
+.landing a{
+    text-decoration: none;
+}
+  
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 50vh;
+}
+  
+.socials .line {
+    background-color: var(--third-color);
+    height: 15vh;
+    width: 2.5px;
+}
+  
+.socials i {
+    color: var(--text-color);
+    font-size: 36px;
+}
+
+.about {
+    height: 50vh;
+    width: 100vw;
+    padding: 100px;
+}
+  
+.about h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--text-color);
+    font-family: "Libre Baskerville", serif;
+}
+  
+.about .description {
+    display: flex;
+    align-items: start;
+}
+  
+.about .description .line {
+    height: 2.5px;
+    width: 400px;
+    background-color: var(--third-color);
+    margin-right: 32px;
+}
+  
+.about .description p {
+    color: var(--text-color);
+    font-size: 20px;
+    text-align: justify;
+}
+  
+.about .description p span {
+    color: var(--third-color);
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 100px;
+}
+  
+.skills h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--text-color);
+    font-family: "Libre Baskerville", serif;
+}
+  
+.cards {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 2.5vh;
+}
+  
+.skill-card {
+    height: 20vw;
+    width: 20vw;
+    background-color: var(--forth-color);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5vh;
+    transition: all ease 0.5s;
+}
+  
+.skill-card:hover {
+    background-color: var(--third-color);
+}
+  
+.skill-card img {
+    height: 7.5vw;
+    width: 7.5vw;
+    object-fit: contain;
+}
+  
+.skill-card h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: white;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 100px;
+}
+
+.projects h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--text-color);
+    font-family: "Libre Baskerville", serif;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 100px;
+}
+  
+.project h1 {
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--text-color);
+    font-family: "Libre Baskerville", serif;
+}
+  
+.project-cards {
+    display: grid;
+    grid-template-columns: auto auto ;
+    margin-top: 50px;
+    gap: 2.5vh;
+}
+
+.project-cards .view {
+    height: 48px;
+    width: 155px;
+    margin-top: 2.5vh;
+    margin-left: 10vw;
+    background-color: transparent;
+    border: 2px solid var(--third-color);
+    border-radius: 8px;
+    color: var(--third-color);
+    font-size: 16px;
+    transition: all ease 0.5s;
+}
+
+.project-cards .view:hover{
+    background-color: var(--third-color);
+    color: #34353b;
+}
+
+.project-cards .view a {
+    color: var(--text-color);
+    padding:0.8em;
+    text-align: center;
+    display:inline-block;
+    text-decoration: none !important;
+    /* margin-left: ; */
+}
+
+  
+.project-card {
+    position: relative;
+    height: 30vw;
+    width: 30vw;
+    background-color: var(--forth-color);
+    border-radius: 20px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5vh;
+    transition: all ease 0.5s;
+}
+  
+.project-card img {
+    position: relative;
+    height: 30vw;
+    width: 30vw;
+    object-fit: cover;
+}
+  
+.project-card .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+    height: 30vw;
+    width: 30vw;
+    background-color: #34353ba2;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+  
+.project-card .overlay h3 {
+    color: var(--project-h3-color);
+    font-size: 24px;
+}
+  
+.project-card .overlay p {
+    color: var(--text-color);
+    font-size: 16px;
+    text-align: center;
+}
+  
+.project-card .overlay button {
+    height: 36px;
+    width: 108px;
+    background-color: var(--third-color);
+    border: 1px solid var(--third-color);
+    border-radius: 8px;
+    color: #34353b;
+    font-size: 12px;
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+  
+.project-card .overlay:hover {
+    opacity: 1;
+}
+  
+.project button {
+    margin-top: 50px;
+    height: 48px;
+    width: 144px;
+    background-color: var(--third-color);
+    border: 1px solid var(--third-color);
+    border-radius: 8px;
+    color: #34353b;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+  
+.project button:hover {
+    background-color: #cc9e4e;
+}
+
+.education{
+    width: 100vw;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.education h1 {
+    font-size: 56px;
+    color: var(--text-color);
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+}
+
+.contact-me {
+    width: 100vw;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+.contact-me h1 {
+    font-size: 56px;
+    color: var(--text-color);
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+}
+  
+.contact {
+    display: flex;
+    gap: 24px;
+}
+  
+.contact-card {
+    background-color: var(--third-color);
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    gap: 10px;
+    margin-top: 7.5vh;
+}
+
+.contact-card a{
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar  {
+    padding-top: 2%;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 100vh;
+    width: 150px;
+    z-index: 999;
+    background-color: var(--second-color-nav);
+    backdrop-filter: blur(40px);
+    box-shadow: 0px 0 5px var(--manu-shadow-color);
+    border-radius: 20px;
+    display: none;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content: flex-start;;
+}
+.menu-button{
+    display: none;
+    fill: var(--text-color);
+}
+.close-button{
+    fill: var(--text-color);
+}
+.sidebar li {
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width:800px) {
+    nav{
+        display: fixed ;
+    }
+    .hideOnMobile{
+        display: none;
+    }
+
+    .menu-button{
+        display: block;
+    }
+       
+    header .landing .intro h3{
+        font-size: 18px;
+    }
+    header .landing .intro h3 span{
+        font-size: 15px;
+    }
+    header {
+        background-image: none;
+        padding:0px 4px 0 4px;
+        height: 20vh;
+        padding-top: 10px;
+    }
+    header .landing{
+        height: 50%;
+    }
+    
+    header .landing .socials{
+        display: none;
+    }
+    .landing h3{
+        padding-top:200px;
+    }
+    .intro div {
+    height: 38px;
+    width: 100px;
+    margin-top: 2.5vh;
+    margin-left: 10vw;
+    background-color: transparent;
+    border: 2px solid var(--third-color);
+    border-radius: 8px;
+    color: var(--third-color);
+    font-size: 12px;
+    transition: all ease 0.5s;
+    }
+    .intro div a{
+        color: var(--text-color);
+        padding:0.8em;
+        text-align: center;
+        display:inline-block;
+        text-decoration: none !important;
+        margin-left: 12px;
+    }
+
+    .about {
+        height: 30vh;
+        width: 100%;
+        padding: 70px 0 0 0;
+    }
+      
+    .about h1 {
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        color: var(--text-color);
+        font-family: "Libre Baskerville", serif;
+    }
+      
+    .about .description {
+        display:inline;
+        align-items:flex-start;
+        align-items: center;
+    }
+      
+    .about .description .line {
+        height: 2.5px;
+        width: 0px;
+        background-color: var(--third-color);
+        margin-right: 0px;
+        align-items: center;
+    }
+      
+    .about .description p {
+        color: var(--text-color);
+        font-size: 16px;
+        text-align: justify;
+    }
+      
+    .about .description p span {
+        color: var(--third-color);
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 50px 50px 10px;
+    }
+      
+    .skills h1 {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--text-color);
+        font-family: "Libre Baskerville", serif;
+    }
+      
+    .cards {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 50px;
+        gap: 2.5vh;
+    }
+      
+    .skill-card {
+        height: 20vw;
+        width: 20vw;
+        background-color: var(--forth-color);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5vh;
+        transition: all ease 0.5s;
+    }
+      
+    .skill-card:hover {
+        background-color: var(--third-color);
+    }
+      
+    .skill-card img {
+        height: 7.5vw;
+        width: 7.5vw;
+        object-fit: contain;
+    }
+      
+    .skill-card h2 {
+        font-size: 12px;
+        font-weight: 400;
+        color: white;
+    }
+
+    .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0px;
+}
+
+.projects h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-color);
+    font-family: "Libre Baskerville", serif;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 100px;
+}
+  
+.project h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-color);
+    font-family: "Libre Baskerville", serif;
+}
+  
+.project-cards {
+    display: grid;
+    grid-template-columns: auto auto ;
+    margin-top: 50px;
+    gap: 2.5vh;
+}
+
+.project-cards .view {
+    height: 30px;
+    width: 100px;
+    margin-top: 2.5vh;
+    margin-left: 0px;
+    background-color: transparent;
+    border: 2px solid var(--third-color);
+    border-radius: 8px;
+    color: var(--third-color);
+    font-size: 10px;
+    transition: all ease 0.5s;
+}
+
+.project-cards .view:hover{
+    background-color: var(--third-color);
+    color: #34353b;
+}
+
+.project-cards .view a {
+    color: var(--text-color);
+    padding:0.8em;
+    text-align: center;
+    display:inline-block;
+    text-decoration: none !important;
+    /* margin-left: ; */
+}
+
+  
+.project-card {
+    position: relative;
+    height: 30vw;
+    width: 30vw;
+    background-color: var(--forth-color);
+    border-radius: 20px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5vh;
+    transition: all ease 0.5s;
+}
+  
+.project-card img {
+    position: relative;
+    height: 30vw;
+    width: 30vw;
+    object-fit: cover;
+}
+  
+.project-card .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+    height: 30vw;
+    width: 30vw;
+    background-color: #34353ba2;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+  
+.project-card .overlay h3 {
+    color: var(--project-h3-color);
+    font-size: 15px;
+}
+  
+.project-card .overlay p {
+    color: var(--text-color);
+    font-size: 16px;
+    text-align: center;
+}
+  
+.project-card .overlay button {
+    height: 36px;
+    width: 108px;
+    background-color: var(--third-color);
+    border: 1px solid var(--third-color);
+    border-radius: 8px;
+    color: #34353b;
+    font-size: 12px;
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+  
+.project-card .overlay:hover {
+    opacity: 1;
+}
+  
+.project button {
+    margin-top: 50px;
+    height: 48px;
+    width: 144px;
+    background-color: var(--third-color);
+    border: 1px solid var(--third-color);
+    border-radius: 8px;
+    color: #34353b;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+  
+.project button:hover {
+    background-color: #cc9e4e;
+}
+
+.contact-me {
+    width: 100vw;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+.contact-me h1 {
+    font-size: 20px;
+    color: var(--text-color);
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+}
+  
+.contact {
+    display: inline-block;
+    gap: 1px;
+}
+  
+.contact-card {
+    background-color: var(--third-color);
+    grid-template-columns: auto auto;
+    padding: 5px;
+    border-radius: 8px;
+    display: flex-start;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.contact-card a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+}
