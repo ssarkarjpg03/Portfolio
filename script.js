@@ -15,3 +15,9 @@ function disableSidebar(){
     sidebar = document.querySelector('.sidebar')
     sidebar.style.display = "none";
 }
+
+
+var icon = document.getElementById("icon");
+icon.onclick = function() {
+    document.body.classList.toggle("light-theme");
+}

@@ -16,9 +16,9 @@
     --project-h3-color:white;
     --manu-shadow-color:rgba(143, 143, 143, 0.493);
     
-
-
-    /* --first-color:#fff;
+} 
+.light-theme{
+    --first-color:#fff;
     --second-color:#B5C0D0; 
     --second-color-nav:#a3a8a28a;
     --third-color:#e4904c;
@@ -27,8 +27,8 @@
     --text-color:black; 
     --nav-text-color:black;
     --project-h3-color:white; 
-    --manu-shadow-color:rgba(0, 0, 0, 0.568);*/
-} 
+    --manu-shadow-color:rgba(0, 0, 0, 0.568);
+}
 
 html {
     scroll-behavior: smooth;
@@ -83,7 +83,11 @@ header nav ul li a {
     text-decoration: none;
     transition: all ease 0.5s;
 }
-  
+header nav ul img{
+    width: 35px;
+    padding-right: 10px;
+    fill: black;
+}
 header nav ul li a:hover {
     color: #fbfbfb;
 }
@@ -489,10 +493,12 @@ header nav ul li .active {
     }
     .hideOnMobile{
         display: none;
+    
     }
 
     .menu-button{
         display: block;
+        margin-left: 0px;
     }
        
     header .landing .intro h3{
@@ -510,6 +516,17 @@ header nav ul li .active {
     header .landing{
         height: 50%;
     }
+    header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position:fixed;
+        width: 100%;
+        height: 50px;
+        z-index: 99;
+        background-color:var(--second-color-nav);
+        border-radius: 60px;
+    }
     
     header .landing .socials{
         display: none;
@@ -518,8 +535,8 @@ header nav ul li .active {
         padding-top:200px;
     }
     .intro div {
-    height: 38px;
-    width: 100px;
+    height: 22px;
+    width: 80px;
     margin-top: 2.5vh;
     margin-left: 10vw;
     background-color: transparent;
@@ -531,25 +548,28 @@ header nav ul li .active {
     }
     .intro div a{
         color: var(--text-color);
-        padding:0.8em;
+        padding:0.1em;
         text-align: center;
         display:inline-block;
         text-decoration: none !important;
-        margin-left: 12px;
+        margin-left: 5px;
     }
 
     .about {
-        height: 30vh;
-        width: 100%;
-        padding: 70px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px 0 20px;
+        height: 20vh;
     }
       
     .about h1 {
         font-size: 20px;
         font-weight: 700;
-        text-align: center;
         color: var(--text-color);
         font-family: "Libre Baskerville", serif;
+        padding-right: 45px;
     }
       
     .about .description {
@@ -568,7 +588,7 @@ header nav ul li .active {
       
     .about .description p {
         color: var(--text-color);
-        font-size: 16px;
+        font-size: 8px;
         text-align: justify;
     }
       
@@ -581,7 +601,7 @@ header nav ul li .active {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 50px 50px 50px 10px;
+        padding: 0px 50px 50px 10px;
     }
       
     .skills h1 {
@@ -602,8 +622,8 @@ header nav ul li .active {
     }
       
     .skill-card {
-        height: 20vw;
-        width: 20vw;
+        height: 50vw;
+        width: 50vw;
         background-color: var(--forth-color);
         border-radius: 20px;
         display: flex;
@@ -620,8 +640,8 @@ header nav ul li .active {
     }
       
     .skill-card img {
-        height: 7.5vw;
-        width: 7.5vw;
+        height: 35vw;
+        width: 35vw;
         object-fit: contain;
     }
       
@@ -663,7 +683,7 @@ header nav ul li .active {
   
 .project-cards {
     display: grid;
-    grid-template-columns: auto auto ;
+    grid-template-columns: auto;
     margin-top: 50px;
     gap: 2.5vh;
 }
@@ -671,8 +691,8 @@ header nav ul li .active {
 .project-cards .view {
     height: 30px;
     width: 100px;
-    margin-top: 2.5vh;
-    margin-left: 0px;
+    margin-top: 1px;
+    margin-left: 50px;
     background-color: transparent;
     border: 2px solid var(--third-color);
     border-radius: 8px;
@@ -692,14 +712,15 @@ header nav ul li .active {
     text-align: center;
     display:inline-block;
     text-decoration: none !important;
+    font-size: 9px;
     /* margin-left: ; */
 }
 
   
 .project-card {
     position: relative;
-    height: 30vw;
-    width: 30vw;
+    height: 50vw;
+    width: 50vw;
     background-color: var(--forth-color);
     border-radius: 20px;
     overflow: hidden;
@@ -711,8 +732,8 @@ header nav ul li .active {
   
 .project-card img {
     position: relative;
-    height: 30vw;
-    width: 30vw;
+    height: 50vw;
+    width: 50vw;
     object-fit: cover;
 }
   
@@ -814,5 +835,11 @@ header nav ul li .active {
     text-decoration: none;
     color: black;
     font-size: 14px;
+}
+.footer-div{
+    width: 100%;
+    height: 50px;
+    background-color: var(--second-color-nav);
+    margin-top: 20px;
 }
 }
