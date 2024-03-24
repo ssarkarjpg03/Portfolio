@@ -48,6 +48,10 @@ header {
     width: 100vw;
 }
 
+/* #nv{
+    display: none;
+} */
+
 header nav {
     display: flex;
     justify-content: space-between;
@@ -496,10 +500,19 @@ header nav ul li .active {
     display: none;
 }
 
+#icon{
+    display: none;
+}
+
 @media screen and (max-width:800px) {
     nav{
         display: fixed ;
     }
+
+    header nav #icon{
+        display: flex;
+    }
+
     .hideOnMobile{
         display: none;
     
@@ -508,10 +521,9 @@ header nav ul li .active {
         display: none;
     }
     .menu-button{
-        display: block;
+        display: flex;
         margin-left: 0px;
     }
-       
     header .landing .intro h3{
         font-size: 18px;
     }
@@ -529,7 +541,7 @@ header nav ul li .active {
     }
     header nav {
         display: flex;
-        justify-content: space-between;
+        justify-content:space-between;
         align-items: center;
         position:fixed;
         width: 100%;
