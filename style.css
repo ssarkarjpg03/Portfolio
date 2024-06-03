@@ -898,9 +898,13 @@ header nav ul li .active {
         margin-top: 10px;
 
     }
+    .education-inner h5{
+        margin-top: 5px;
+    }
 
     .education-inner p {
-        font-size: 16px;
+        margin-top: 5px;
+        font-size: 10px;
     }
 
     .education-inner img {
