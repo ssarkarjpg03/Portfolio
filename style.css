@@ -873,9 +873,7 @@ header nav ul li .active {
     }
 
     .education {
-        /* display: flex;
-        align-items: center;
-        justify-content: center; */
+        /* width: 100vw; */
         gap: 20px;
     }
     
@@ -884,12 +882,17 @@ header nav ul li .active {
         border-radius: 20px;
         text-align:center;
         margin-top: 10px;
+        
+    }
+
+    .education-inner p {
+        font-size: 16px;
     }
     
     .education-inner img {
-        width: 150px;
+        width: 100px;
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        border-radius: 20px;
+        border-radius: 10px;
     }
 
     .contact-me {
